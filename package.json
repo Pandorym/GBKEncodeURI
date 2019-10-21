@@ -1,0 +1,39 @@
+{
+  "name": "@pandorym/gbkencodeuri",
+  "version": "0.0.0",
+  "description": "",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "main": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "dev": "gulp watch",
+    "build": "rm -rf ./dist && gulp tsc"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test && npm run build && git add dist"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pandorym/GBKEncodeURI.git"
+  },
+  "author": "Pandorym <Pandorym@foxmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Pandorym/GBKEncodeURI/issues"
+  },
+  "homepage": "https://github.com/Pandorym/GBKEncodeURI#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-typescript": "^5.0.1",
+    "husky": "^3.0.9",
+    "merge-stream": "^2.0.0",
+    "mocha": "^6.2.0",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3"
+  }
+}
